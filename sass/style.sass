@@ -1,0 +1,154 @@
+@font-face
+  font-family: 'HelveticaNeueCyr'
+  src: url('../fonts/HelveticaNeueCyr-Medium.eot')
+  src: local('HelveticaNeueCyr-Medium'),
+  url('../fonts/HelveticaNeueCyr-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/HelveticaNeueCyr-Medium.woff') format('woff'),
+  url('../fonts/HelveticaNeueCyr-Medium.ttf') format('truetype')
+  font-weight: 500
+  font-style: normal
+
+@font-face
+  font-family: 'HelveticaNeueCyr'
+  src: url('../fonts/HelveticaNeue.eot')
+  src: local('HelveticaNeue'),
+  url('../fonts/HelveticaNeue.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/HelveticaNeue.woff') format('woff'),
+  url('../fonts/HelveticaNeue.ttf') format('truetype')
+  font-weight: 400
+  font-style: normal
+
+*
+  transition: all 0.2s ease-in
+
+body
+  font-family: 'HelveticaNeueCyr', sans-serif
+
+.main
+  margin: 0 auto
+  .container
+    width: 100%
+    max-width: 1300px
+    margin: 0 auto
+    z-index: 3
+    display: flex
+  &-products
+    display: flex
+    align-items: flex-end
+    justify-content: center
+    flex-wrap: wrap
+  &-product
+    text-align: center
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.21)
+    border: 1px solid #e6e6e6
+    margin: 15px
+    min-height: 413px
+    flex-basis: 19%
+    padding: 18px
+    position: relative
+    &__category
+      color: #aeaeae
+      font-size: 16px
+      text-transform: uppercase
+      text-align: left
+      margin-top: 20px
+    &__title
+      color: #2175cc
+      font-size: 16px
+      display: block
+      text-align: left
+      margin-top: 18px
+    &__price
+      color: #272727
+      font-size: 18px
+      font-weight: 500
+      display: block
+      text-align: left
+      &-strike
+        text-decoration: line-through
+        color: #aeaeae
+        font-size: 16px
+        display: block
+        text-align: left
+        margin-top: 18px
+    .shopping-block
+      display: flex
+      justify-content: space-between
+      align-items: flex-end
+    &__btn
+      display: block
+      color: #101010
+      font-size: 15px
+      font-weight: 600
+      padding: 10px 30px
+      background-color: #ffd304
+      border: none
+      cursor: pointer
+      &:hover
+        background-color: darken(#ffd304, 10%)
+    &_disc:before
+      content: '20%'
+      display: inline-block
+      background-color: #f30a2b
+      color: #fff
+      font-size: 14px
+      position: absolute
+      top: 0
+      left: 0
+      padding: 9px 15px
+      border-bottom-right-radius: 30px
+    &_new:before
+      content: 'NEW'
+      display: inline-block
+      background-color: #ffd304
+      color: #151515
+      font-size: 12px
+      position: absolute
+      font-weight: 500
+      top: 0
+      left: 0
+      padding: 9px 15px
+      border-bottom-right-radius: 30px
+
+@media(max-width: 1199px)
+  .main
+    &-product
+      flex-basis: 25%
+    &-products
+      justify-content: flex-start
+
+@media(max-width: 991px)
+  .main
+    &-product
+      flex-basis: 30%
+    &-products
+      justify-content: center
+
+@media(max-width: 767px)
+  .main
+    &-product
+      flex-basis: 40%
+    &-products
+      justify-content: center
+
+@media(max-width: 580px)
+  .main
+    &-product
+      flex-basis: 60%
+    &-products
+      justify-content: center
+
+@media(max-width: 425px)
+  .main
+    &-product
+      flex-basis: 70%
+      min-height: auto
+    &-products
+      justify-content: center
+
+@media(max-width: 320px)
+  .main
+    &-product
+      flex-basis: 90%
+    &-products
+      justify-content: center
